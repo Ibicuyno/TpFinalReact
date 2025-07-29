@@ -62,7 +62,20 @@ const Main = () => {
                 <h2>{producto.name}</h2>
                 <p>${producto.price}</p>
                 <p>{producto.description}</p>
-                <p>{producto.image}</p>
+                {/* {<p>{producto.image}</p>} */}
+
+                <img
+                  src={producto.image}
+                  alt="Imagen del producto"
+                  style={{ maxWidth: "300px", height: "auto", borderRadius: "8px" }}
+                  onError={(e) => {
+                    e.target.style.display = 'none'; // Oculta la imagen si falla la carga
+                    console.warn("No se pudo cargar la imagen.");
+                  }}
+                />
+
+
+
                 <p>{producto.sku}</p>
                 {
                   user && <>

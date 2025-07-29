@@ -114,8 +114,33 @@ const EditProduct = () => {
           <label htmlFor="description">Descripción del producto:</label>
           <textarea name="description" id="description" onChange={handleDescription} value={description}></textarea>
 
-          <label htmlFor="image">Imagen del producto:</label>
-          <textarea name="image" id="image" onChange={handleImage} value={image}></textarea>
+          {/* <label htmlFor="image">Imagen del producto:</label>
+          <textarea name="image" id="image" onChange={handleImage} value={image}></textarea> */}
+
+
+          <label htmlFor="image">Imagen del producto (URL):</label>
+          <input
+            type="text"
+            name="image"
+            id="image"
+            onChange={handleImage}
+            value={image}
+          />
+
+          {image && (
+            <div style={{ margin: "10px 0" }}>
+              <p>Vista previa de la imagen:</p>
+              <img
+                src={image}
+                alt="Vista previa"
+                style={{ maxWidth: "300px", borderRadius: "8px", border: "1px solid #ccc" }}
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  console.warn('No se pudo cargar la imagen.');
+                }}
+              />
+            </div>
+          )}
 
           <label htmlFor="sku">SKU del producto:</label>
           <textarea name="sku" id="sku" onChange={handleSku} value={sku}></textarea>
