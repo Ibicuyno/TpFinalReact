@@ -45,7 +45,7 @@ const Main = () => {
     <main>
       <section className="banner">
         <h1>Bienvenidos a la tienda Ibicuyna</h1>
-        <h2>Los mejores precios del pueblo</h2>
+        <h2>Los mejores precios del pueblo!</h2>
       </section>
       <section className="productList">
         {
@@ -59,9 +59,9 @@ const Main = () => {
           productos.map((producto) => {
             return (
               <div className="product">
-                <h2>{producto.name}</h2>
+                {/* <h2>{producto.name}</h2>
                 <p>${producto.price}</p>
-                <p>{producto.description}</p>
+                <p>{producto.description}</p> */}
                 {/* {<p>{producto.image}</p>} */}
 
                 <img
@@ -74,7 +74,9 @@ const Main = () => {
                   }}
                 />
 
-
+                <h2>{producto.name}</h2>
+                <p>${producto.price}</p>
+                <p>{producto.description}</p>
 
                 <p>{producto.sku}</p>
                 {
