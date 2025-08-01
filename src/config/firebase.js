@@ -1,18 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-
-// // colocar las credencias propias a cada uno, 1er concepto que nos enseño...
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDwHR_Gcv9QCiHRtFP5mmDnRcPghtMrODQ",
-//   authDomain: "productos-utn.firebaseapp.com",
-//   projectId: "productos-utn",
-//   storageBucket: "productos-utn.firebasestorage.app",
-//   messagingSenderId: "692029493149",
-//   appId: "1:692029493149:web:ce135f7072d2997be46974"
-// };
 
  // Leo's web app's Firebase configuration AGREGAMOS EL CONCEPTO DE VARIABLES DE ENTORNO. VER ARCHIVO .env
  const firebaseConfig = {

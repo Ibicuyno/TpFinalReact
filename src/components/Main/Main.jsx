@@ -8,8 +8,6 @@ import { useAuth } from "../../context/AuthContext"
 const Main = () => {
   const [productos, setProductos] = useState([])
   const [error, setError] = useState(null)
-  // simulación de usuario conectado
-  // const [user, setUser] = useState(true)
 
   // Traigo el estado del usuario del contexto
   const { user } = useAuth()
@@ -32,8 +30,6 @@ const Main = () => {
         await deleteDoc(doc(db, "productos", id))
         // actualiza la ui filtrando el producto borrado en el estado (local)
         setProductos(productos.filter(p => p.id !== id))
-        // volviendo a leer la base de datos completa (remoto, poco óptimo)
-        // await fetchingProducts()
       }
     } catch (error) {
       console.log(error)
@@ -77,7 +73,6 @@ const Main = () => {
                 <h2>{producto.name}</h2>
                 <p>${producto.price}</p>
                 <p>{producto.description}</p>
-
                 <p>{producto.sku}</p>
                 {
                   user && <>
