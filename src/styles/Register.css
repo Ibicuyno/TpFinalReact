@@ -33,9 +33,6 @@
   width: 100%;
 }
 
-
-
-
 #register-section form label {
   font-weight: bold;
 }
@@ -53,7 +50,6 @@
   margin-top: 10px;
   border: none;
   padding: 8px 16px;
-  /* background-color: rgb(6, 66, 6); */
   background-color: #2d3277;
   border-radius: 10px;
   color: white;

@@ -117,7 +117,6 @@ const EditProduct = () => {
           {/* <label htmlFor="image">Imagen del producto:</label>
           <textarea name="image" id="image" onChange={handleImage} value={image}></textarea> */}
 
-
           <label htmlFor="image">Imagen del producto (URL):</label>
           <input
             type="text"

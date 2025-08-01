@@ -47,7 +47,7 @@ import {
   updateProfile 
 } from "firebase/auth"
 
-// (Opcional) importar Firestore si querés guardar los datos aparte
+// (Opcional) importar Firestore si querés guardar los datos aparte, preferi no ponerlo
 // import { db } from "../config/firebase"
 // import { doc, setDoc } from "firebase/firestore"
 
@@ -78,7 +78,7 @@ const AuthProvider = ({ children }) => {
       displayName: `${nombre} ${apellido}`
     })
 
-    // (Opcional) Guardar datos adicionales en Firestore
+    // (Opcional) Guardar datos adicionales en Firestore, preferi no ponerlo
     /*
     await setDoc(doc(db, "usuarios", user.uid), {
       nombre,

@@ -109,7 +109,7 @@ const Dashboard = () => {
     <Layout>
       <section id="admin-section">
         <h1>Panel de administración</h1>
-        <p>Alta, baja y modificación de productos.</p>
+        <p>Alta de productos.</p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Nombre del producto:</label>
           <input type="text" name="name" id="name" onChange={handleName} value={name} />
@@ -146,9 +146,6 @@ const Dashboard = () => {
               />
             </div>
           )}
-
-
-
 
           <label htmlFor="sku">SKU:</label>
           <textarea name="sku" id="sku" onChange={handleSku} value={sku}></textarea>

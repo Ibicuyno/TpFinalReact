@@ -26,7 +26,7 @@ const Login = () => {
     // intentar guardar o registrar un usuario.
     try {
       await login(email, password)
-      setMessage("Usuario loguedo con éxito...")
+      setMessage("Usuario logueado con éxito...")
       setEmail("")
       setPassword("")
       setTimeout(() => {
